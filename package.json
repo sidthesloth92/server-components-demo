@@ -40,15 +40,9 @@
     "prettier": "1.19.1"
   },
   "scripts": {
-    "start": "concurrently \"npm run server:dev\" \"npm run bundler:dev\"",
-    "start:prod": "concurrently \"npm run server:prod\" \"npm run bundler:prod\"",
-    "server:dev": "cross-env NODE_ENV=development nodemon -- --conditions=react-server server",
-    "server:prod": "cross-env NODE_ENV=production nodemon -- --conditions=react-server server",
-    "bundler:dev": "cross-env NODE_ENV=development nodemon -- scripts/build.js",
-    "bundler:prod": "cross-env NODE_ENV=production nodemon -- scripts/build.js",
-    "prettier": "prettier --write **/*.js",
-    "seed": "node ./scripts/seed.js",
-    "start:fake-api": "json-server --watch ./db.json"
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "cross-env NODE_ENV=development nodemon -- --conditions=react-server server",
+    "start:server": "json-server --watch ./db.json"
   },
   "babel": {
     "presets": [
