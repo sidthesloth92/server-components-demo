@@ -17,6 +17,8 @@
     "excerpts": "^0.0.3",
     "express": "^4.17.1",
     "html-webpack-plugin": "4.5.0",
+    "json-server": "^0.16.3",
+    "lowdb": "^1.0.0",
     "marked": "^1.2.5",
     "nodemon": "^2.0.6",
     "pg": "^8.5.1",
@@ -45,7 +47,8 @@
     "bundler:dev": "cross-env NODE_ENV=development nodemon -- scripts/build.js",
     "bundler:prod": "cross-env NODE_ENV=production nodemon -- scripts/build.js",
     "prettier": "prettier --write **/*.js",
-    "seed": "node ./scripts/seed.js"
+    "seed": "node ./scripts/seed.js",
+    "start:fake-api": "json-server --watch ./db.json"
   },
   "babel": {
     "presets": [

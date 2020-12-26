@@ -27,6 +27,7 @@ function Content() {
     selectedId: null,
     isEditing: false,
     searchText: '',
+    likes: 0,
   });
   const response = useServerResponse(location);
   return (
