@@ -1,5 +1,3 @@
-import {likeBlogPost} from './blog/blog-api';
-
 import React from 'react';
 import {useLocation} from './LocationContext.client';
 
